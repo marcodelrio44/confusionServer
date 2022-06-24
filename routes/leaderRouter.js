@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const leaderRouter = express.Router();
 const Leaders= require('../models/leaders')
-
+const cors= require('./cors');
 const authenticate= require('../authenticate');
 leaderRouter.use(bodyParser.json());
 

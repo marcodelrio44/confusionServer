@@ -8,6 +8,7 @@ const usersRouter = require('./routes/users');
 const dishRouter = require ('./routes/dishRouter');
 const leaderRouter= require('./routes/leaderRouter');
 const promoRouter = require ('./routes/promoRouter');
+const uploadRouter = require ('./routes/uploadRouter');
 
 const app = express();
 const passport=require('passport');
@@ -34,6 +35,7 @@ app.use('/users', usersRouter);
 app.use('/dishes', dishRouter);
 app.use('/leaders', leaderRouter);
 app.use('/promotions', promoRouter);
+app.use('imageUpload', uploadRouter);
 
 const url = config.mongoUrl;
 const connect = mongoose.connect(url);

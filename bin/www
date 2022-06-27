@@ -38,7 +38,7 @@ var options={
   cert:fs.readFileSync(__dirname+"/certificate.pem")
 }
 
-var secureServer = http.createServer(options,app);
+var secureServer = https.createServer(options,app);
 
 secureServer.listen(app.get('secPort'),() =>{
   console.log('Secure server listening on port '+app.get('secPort'));
